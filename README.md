@@ -1,7 +1,7 @@
 # secure-conf
 A collection of hardened configurations files for Web and SSL/TLS services such as nginx, apache, lighttpd, gpg, ssh etc.
 
-**NGINX**
+## NGINX
 
 There are a few things to take into account for the setup of nginx.conf. This setup is meant to be used as a best practice guide/template. In this example, the most modern cipher suites and ssl protocols are being used. However, this is prone to raise obvious comaptibility issues based on your own site setup and requirements. For a compaility matrix based on your nginx version, browser compaitiblity etc, see the second and third links pasted below under 'Useful Reading'. 
 

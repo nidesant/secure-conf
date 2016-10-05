@@ -1,7 +1,7 @@
 # HOW TO 
 Meant to provide users with instructions on generating ssl certs and keys. 
 
-#### Creating a Strong DH Parameter (Key) File
+## Creating a Strong DH Parameter (Key) File
 
 On your server, run the following commands in order:
 

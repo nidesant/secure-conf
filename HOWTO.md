@@ -9,7 +9,7 @@ On your server, run the following commands in order:
 
     openssl dhparam -out dhparam.pem 4096 
 
-Bit sizes can vary based on your cert and computational capabilities.
+Bit sizes can vary based on your cert and computational capabilities, but should be stronger than 1024 bits.
 
 Lastly, tell nginx to use it for DHE key-exchange:
 

@@ -1,1 +1,5 @@
-This is under construction. This will provide users with instructions on generating ssl certs, and creating ssh keys. 
+# HOW TO 
+Meant to provide users with instructions on generating ssl certs and keys. 
+
+### Creating a Strong DH Parameter (Key) File
+

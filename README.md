@@ -3,7 +3,7 @@ A collection of hardened configurations files for Web and SSL/TLS services such 
 
 ## NGINX
 
-There are a few things to take into account for the setup of nginx. This setup is meant to be used as a best practice guide/template. In this example, the most modern cipher suites and ssl protocols are being used. However, this is prone to raise obvious comaptibility issues based on your own site setup and requirements. For a ciphersuite compaility matrix based on your nginx version, browser compaitiblity etc, see the second and third links pasted below under 'Useful Reading'. 
+There are a few things to take into account for the setup of nginx. This setup is meant to be used as a best practice guide/template. In this example, the most modern cipher suites and ssl protocols are being used. However, this is prone to raise obvious comaptibility issues based on your own site setup and requirements. For a ciphersuite compaility matrix based on your nginx version, browser etc, see the second and third links pasted below under 'Useful Reading'. 
 
 The first thing worth noting about this configuration is the use of PFS. All modern configurations should use ciphersuites that include ephemeral Diffie-Hellman key exchange. This will prevent an attacker from retoractively decrypting your past traffic/data as a new session key is generated at each new session. Adittionaly, other features include server_tokens set to off, automatic HTTP redirects, OWASP headers, a 4096 bit DH parameter, ssl stapling, and SSL/TLSv1.0 disabled. 
 

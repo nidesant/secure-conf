@@ -54,3 +54,9 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 - Set	Timeout	Limits	for	Request	Headers and request body
 
 - additional request limits
+
+Useful Reading:
+
+https://benchmarks.cisecurity.org/tools2/apache/CIS_Apache_HTTP_Server_2.4_Benchmark_v1.2.0.pdf
+
+http://httpd.apache.org/docs/2.4/misc/security_tips.html

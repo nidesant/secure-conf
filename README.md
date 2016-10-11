@@ -55,6 +55,8 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 
 - additional request limits
 
+Using conf.d/security for security settings instead of clogging up the global config. Done to demostrate apache's modularity. 
+
 Useful Reading:
 
 https://benchmarks.cisecurity.org/tools2/apache/CIS_Apache_HTTP_Server_2.2_Benchmark_v3.4.0.pdf

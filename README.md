@@ -26,3 +26,31 @@ https://mozilla.github.io/server-side-tls/ssl-config-generator/
 https://wiki.mozilla.org/Security/Server_Side_TLS
 
 ## APACHE
+
+- allow override to all directives
+
+- restrict options directive for / and other directives (Options None)
+
+- limit http request methods
+
+- disable http trace method
+
+- rewrite	rule	to	the	global	server	level	configuration	to	disallow	other	protocol	versions.
+
+- Restrict	access	to	inappropriate	file	extensions
+
+- OWASP headers similar to nginx
+
+- set loglevel to notice
+
+- configure access log
+
+- configure log rotation (don't store logs on root partition)
+
+- disable ssl insecure renogtiation 
+
+- enable ssl stapling
+
+- Set	Timeout	Limits	for	Request	Headers and request body
+
+- additional request limits

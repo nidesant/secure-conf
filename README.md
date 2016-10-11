@@ -27,7 +27,7 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 
 ## APACHE
 
-- allow override to all directives
+- restrict allow override to all directives
 
 - restrict options directive for / and other directives (Options None)
 

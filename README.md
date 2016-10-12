@@ -27,19 +27,19 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 
 ## APACHE
 
-- restrict allow override to all directives
+~~restrict allow override to all directives
 
-- restrict options directive for / and other directives (Options None)
+~~restrict options directive for / and other directives (Options None)
 
-- limit http request methods
+- limit http request methods (global config)
 
-- disable http trace method
+- disable http trace method (conf/security)
 
 - rewrite	rule	to	the	global	server	level	configuration	to	disallow	other	protocol	versions.
 
 - Restrict	access	to	inappropriate	file	extensions
 
-- OWASP headers similar to nginx
+- OWASP headers similar to nginx (
 
 - set loglevel to notice
 

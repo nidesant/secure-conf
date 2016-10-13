@@ -1,6 +1,9 @@
 <VirtualHost *:443>
 	ServerAdmin webmaster@localhost
-
+        
+        RewriteEngine On
+        RewriteOptions Inherit 
+ 
 	DocumentRoot /var/www
 	<Directory /> 
                 ServerAdmin admin@example.com
@@ -9,13 +12,27 @@
                 AllowOverrideList None
                 Order deny,allow
                 deny from all
+                
+                # Limit HTTP methods
+                <LimitExcept GET POST OPTIONS>
+                        Order deny,allow
+                        Deny from all
+               </LimitExcept> 
+
 	</Directory>
 	<Directory /var/www/>
-		Options None
+	        Options None
 		AllowOverride None
                 AllowOverrideList
 		Order allow,deny
 		allow from all
+
+                # Limit HTTP methods
+                <LimitExcept GET POST OPTIONS>
+                        Order deny,allow
+                        Deny from all
+               </LimitExcept>
+ 
 	</Directory>
 
 	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
@@ -24,13 +41,20 @@
 		Options +ExecCGI +SymLinksIfOwnerMatch
 		Order deny,allow
 		deny from all
+
+                # Limit HTTP methods
+                <LimitExcept GET POST OPTIONS>
+                        Order deny,allow
+                        Deny from all
+               </LimitExcept> 
+
 	</Directory>
 
 	ErrorLog ${APACHE_LOG_DIR}/error.log
 
 	# Possible values include: debug, info, notice, warn, error, crit,
 	# alert, emerg.
-	LogLevel warn
+	LogLevel notice
 
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>

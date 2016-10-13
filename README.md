@@ -31,29 +31,31 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 
 ~~restrict options directive for / and other directives (Options None)~~
 
-- limit http request methods (global config)
+~~limit http request methods~~
 
-- disable http trace method (conf/security)
+~~disable http trace method (conf/security)~~
 
-- rewrite	rule	to	the	global	server	level	configuration	to	disallow	other	protocol	versions.
+~~rewrite	rule	to	the	global	server	level	configuration	to	disallow	other	protocol	versions (global config)~~
 
-- Restrict	access	to	inappropriate	file	extensions
+~~Restrict	access	to	inappropriate	file	extensions~~
 
-- OWASP headers similar to nginx (
+~~Deny IP based requests~~
 
-- set loglevel to notice
+~~OWASP headers similar to nginx (conf/security)~~
+
+~~set loglevel to notice~~
 
 - configure access log
 
 - configure log rotation (don't store logs on root partition)
 
-- disable ssl insecure renogtiation 
+- disable ssl insecure renogtiation (conf/security)
 
-- enable ssl stapling
+- enable ssl stapling (conf/security)
 
 - Set	Timeout	Limits	for	Request	Headers and request body
 
-- additional request limits
+- additional request limits 
 
 Using conf.d/security for security settings instead of clogging up the global config. Done to demostrate apache's modularity. 
 

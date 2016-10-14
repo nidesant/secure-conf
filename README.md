@@ -45,9 +45,9 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 
 ~~set loglevel to notice~~
 
-- configure access log
+~~configure access log~~
 
-- configure log rotation (don't store logs on root partition)
+~~configure log rotation (don't store logs on root partition)~~
 
 - disable ssl insecure renogtiation (conf/security)
 
@@ -56,6 +56,8 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 - Set	Timeout	Limits	for	Request	Headers and request body
 
 - additional request limits 
+
+- disable modules
 
 Using conf.d/security for security settings instead of clogging up the global config. Done to demostrate apache's modularity. 
 

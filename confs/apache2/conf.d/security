@@ -56,3 +56,10 @@ Header set X-Frame-Options: "sameorigin"
 
 #Add one year HSTS header for all users...
 Header add Strict-Transport-Security "max-age=31536000"
+
+#Disabling SSL Renegotiation 
+SSLInsecureRenegotiation off
+
+#Enable SSL stapling
+SSLUseStapling On
+SSLStaplingCache "dbm:logs/ssl_staple_cache.db"

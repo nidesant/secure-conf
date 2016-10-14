@@ -49,9 +49,9 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 
 ~~configure log rotation (don't store logs on root partition)~~
 
-- disable ssl insecure renogtiation (conf/security)
+~~disable ssl insecure renogtiation~~
 
-- enable ssl stapling (conf/security)
+~~enable ssl stapling~~
 
 - Set	Timeout	Limits	for	Request	Headers and request body
 

@@ -55,7 +55,7 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 
 ~~Set	Timeout	Limits	for	Request	Headers and request body~~
 
-~~additional request limits for request body~~
+~~additional request limits~~
 
 Disable modules
 

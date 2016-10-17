@@ -53,11 +53,11 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 
 ~~enable ssl stapling~~
 
-- Set	Timeout	Limits	for	Request	Headers and request body
+~~Set	Timeout	Limits	for	Request	Headers and request body~~
 
 - additional request limits 
 
-- disable modules
+Disable modules
 
 Using conf.d/security for security settings instead of clogging up the global config. Done to demostrate apache's modularity. 
 

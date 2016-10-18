@@ -54,7 +54,7 @@ Header set X-XSS-Protection: "1; mode=block"
 # Requires mod_headers to be enabled.
 Header set X-Frame-Options: "sameorigin"
 
-#Add one year HSTS header for all users...
+#Add one year HSTS header for all users
 Header add Strict-Transport-Security "max-age=31536000"
 
 #Disabling SSL Renegotiation 

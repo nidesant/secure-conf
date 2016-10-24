@@ -27,39 +27,27 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 
 ## APACHE
 
-~~restrict allow override to all directives~~
+The apache confugration is very similar to the setup of nginx, and is meant to be used as a best practice guide/template. This configuration was devleoped against CIS (Center for Internet Security) benchmarks for the apache server (there is a link to the benchmark document in the 'Useful reading' section). In this example, the most modern cipher suites and ssl protocols are being used for the most recent versions of apache (2.4.x). This configuration also makes use of PFS-only ciphersuites. Adittionaly, other features include server_tokens/signature set to off, automatic HTTP redirects, ssl stapling, OWASP headers, and all versions of SSL disabled. 
 
-~~restrict options directive for / and other directives (Options None)~~
+There are more features worth mentioning that have been added to the apache configration that are not configured in nginx. These features and their funcinonalities are explained in brief below:
 
-~~limit http request methods~~
+Restrict options directive for / and other directives - The	Options directive	for	the	root	OS	level	is	used	to	create	a default	minimal	options	policy	that	allows	only	the	minimal	options	at	the	root	directory	level.	
 
-~~disable http trace method (conf/security)~~
+Limit http request methods - The HTTP	1.1	protocol supports	several	request	methods	which are	rarely used	and	potentially	high risk.	For	example, methods such as PUT and DELETE are rarely used and	should be disabled in keeping	with the	primary	security principal of minimize features and options.	
 
-~~rewrite	rule	to	the	global	server	level	configuration	to	disallow	other	protocol	versions (global config)~~
+Disable http trace method - The HTTP 1.1 protocol requires support for the TRACE request method which reflects the request back as a response and was intended for diagnostics purposes. The TRACE method is not needed and is easily subjected to abuse and should be disabled.
 
-~~Restrict	access	to	inappropriate	file	extensions~~
+Rewrite	rule	to	the	global	server	level	configuration	to	disallow	other	protocol	versions - Many malicious automated programs, vulnerability scanners and fingerprinting tools will send abnormal HTTP protocol versions to see how the web server responds. These requests are usually part of the attacker's enumeration process and therefore it is important that we respond by denying these requests.
 
-~~Deny IP based requests~~
+Restrict	access	to	inappropriate	file	extensions - There are many files that are often left within the web server document root that could provide an attacker with sensitive information. Most often these files are mistakenly left behind after installation, trouble-shooting, or backing up files before editing.
 
-~~OWASP headers similar to nginx (conf/security)~~
+Deny IP based requests - A common malware propagation and automated network scanning technique is to use IP addresses rather than host names for web requests, since it's much simpler to automate. By denying IP based web requests, these automated techniques will be denied access to the website. 
 
-~~set loglevel to notice~~
+Set	Timeout	Limits for	Request	Headers and request body - Setting a request header timeout is vital for mitigating Denial of Service attacks based on slow requests. The slow request attacks are particularly lethal and relative easy to perform, because they require very little bandwidth and can easily be done through anonymous proxies. 
 
-~~configure access log~~
+Disable modules - There are many apache modules that should be minimized in a live system. Typical modules to disable are the Info module, User Directories module, Proxy module, Autoindex module, Status module, and the WebDAV module. 
 
-~~configure log rotation (don't store logs on root partition)~~
-
-~~disable ssl insecure renogtiation~~
-
-~~enable ssl stapling~~
-
-~~Set	Timeout	Limits	for	Request	Headers and request body~~
-
-~~additional request limits~~
-
-Disable modules
-
-Using conf.d/security for security settings instead of clogging up the global config. Done to demostrate apache's modularity. 
+Lastly, this configuration is meant to demonstrate apache's modularity and flexibility. Many directives were defined within various configuration files. Instead of clogging the global configuration (apache2.conf), many of the features described above are defined within conf.d/security. Additional directives are also defined within sites-enabled/000-default. These directives will serve as the default directives for directives not explicitly defined within specific virtual host settings. For example, you can define a Webmaster email address and not define individual email addresses for each virtual host. 
 
 Useful Reading:
 

@@ -29,7 +29,7 @@ https://wiki.mozilla.org/Security/Server_Side_TLS
 
 The apache configuration is very similar to the setup of nginx, and is meant to be used as a best practice guide/template. This configuration was developed against CIS (Center for Internet Security) benchmarks for the apache server (there is a link to the benchmark document in the 'Useful reading' section). In this example, the most modern cipher suites and ssl protocols are being used for the most recent versions of apache (2.4.x). This configuration also makes use of PFS-only ciphersuites. Additionally, other features include server tokens/signature set to off, automatic HTTP redirects, ssl stapling, OWASP headers, and all versions of SSL disabled.
 
-There are more features worth mentioning that have been added to the apache configration that are not configured in nginx. These features and their funcinonalities are explained in brief below:
+There are more features worth mentioning that have been added to the apache configuration that are not configured in nginx. These features and their functionalities are explained in brief below:
 
 Restrict options directive for / and other directives - The	Options directive	for	the	root	OS	level	is	used	to	create	a default	minimal	options	policy	that	allows	only	the	minimal	options	at	the	root	directory	level.	
 

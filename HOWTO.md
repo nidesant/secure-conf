@@ -15,3 +15,5 @@ Lastly, tell nginx to use it for DHE key-exchange in your nginx configuration:
 
     ssl_dhparam /etc/ssl/certs/dhparam.pem;
 
+## Generating GPG Key Pairs
+

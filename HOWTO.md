@@ -41,7 +41,7 @@ If you are using gnupg version 1.4.10 or newer, this will lead to a selection sc
     Key does not expire at all
     Is this correct? (y/N) y
     
-Selecting "RSA and RSA" for key will enable both encryption and signing. As for key size, it goes without saying that the longer the key size, the more secure it will be against attacks. However, computational capabilities may vary based on circumstance. It is recommended to have a key size of 4096 bits, but 2048 is acceptable. 
+Selecting "RSA and RSA" for key will enable both encryption and signing. As for key size, it goes without saying that the longer the key size, the more secure it will be against attacks. However, computational capabilities may vary based on circumstance. It is recommended to have a key size of 4096 bits with the sha512 hashing, but 2048 is acceptable. 
 
 You will then be prompted to fill out your name, email address, comment, and to create a passphrase. 
 

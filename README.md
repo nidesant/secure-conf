@@ -52,3 +52,11 @@ Lastly, this configuration is meant to demonstrate apache's modularity and flexi
 Useful Reading:
 
 https://benchmarks.cisecurity.org/tools2/apache/CIS_Apache_HTTP_Server_2.2_Benchmark_v3.4.0.pdf
+
+## GPG
+
+gpg.conf configurations are based on Rise Up's Open PGP Best Practices and Jacob Appelbaum's duraconf. 
+
+https://riseup.net/en/security/message-security/openpgp/best-practices
+
+https://github.com/ioerror/duraconf/blob/master/configs/gnupg/gpg.conf

@@ -62,3 +62,9 @@ https://riseup.net/en/security/message-security/openpgp/best-practices
 https://github.com/ioerror/duraconf/blob/master/configs/gnupg/gpg.conf
 
 http://ekaia.org/blog/2009/05/10/creating-new-gpgkey/
+
+## SSH
+
+
+
+
